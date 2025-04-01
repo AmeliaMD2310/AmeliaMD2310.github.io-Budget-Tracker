@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Budget Tracker</h1>
+        
+        <h3>Add Transaction</h3>
+        <input type="number" id="amount" placeholder="Amount" required>
+        <select id="category">
+            <option value="housing">Housing</option>
+            <option value="transportation">Transportation</option>
+            <option value="utilities">Utilities</option>
+            <option value="groceries">Groceries</option>
+            <option value="salary">Salary</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="other">Other</option>
+        </select>
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+        <button onclick="addTransaction()">Add</button>
+        
+        <h3>Transactions</h3>
+        <ul id="transaction-list"></ul>
+        
+        <h3>Summary</h3>
+        <p>Total Income: $<span id="total-income">0</span></p>
+        <p>Total Expenses: $<span id="total-expenses">0</span></p>
+        <p>Remaining Balance: $<span id="remaining-balance">0</span></p>
+    </div>
+    
+    <script src="budgetTracker.js"></script>
+</body>
+</html>
